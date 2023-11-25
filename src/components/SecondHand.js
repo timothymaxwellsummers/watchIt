@@ -17,6 +17,7 @@ export default function SecondHand() {
 
     return (
         <div className={handStyles.secondHandContainer} style={{ transform: `rotate(${degrees}deg)` }}>
+            {/* Pivot Point */}
             <img src={"/secondHand.png"} alt="Second Hand" className={handStyles.secondHandImage}/>
         </div>
     );

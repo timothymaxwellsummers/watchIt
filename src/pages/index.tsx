@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import SecondHand from '../components/SecondHand';
+import MinuteHand from '../components/MinuteHand';
 import styles from '../styles/index.module.css'; // Ensure you have this CSS module
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
           objectFit="cover" // This keeps the aspect ratio and covers the area
         />
       </div>
+      <MinuteHand />
       <SecondHand />
     </main>
   );

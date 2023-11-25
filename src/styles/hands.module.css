@@ -6,7 +6,7 @@
     justify-content: center;
     align-items: center;
     height: 290px; /* Adjust the height as needed */
-    transform-origin: 50% 82%; /* Adjust this based on the image's pivot point */
+    transform-origin: 50% 81.87%; /* Adjust this based on the image's pivot point */
     transition: transform 1s linear; /* This provides the smooth rotation effect */
 }
 
@@ -15,3 +15,33 @@
     width: auto; /* Adjust the size of the second hand as needed */
     filter: drop-shadow(2px 2px 2px #5e5e5e); /* This adds a shadow to the second hand */
 }
+
+.pivotPoint {
+    position: absolute;
+    top:94.25%; /* Adjust based on the pivot point's position */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 18px;
+    height: 18px;
+    background-color: red; /* Make the dot visible */
+    z-index: 10;
+}
+
+.minuteHandContainer {
+    position: absolute;
+    top: 25.4%; /* Adjust this value to move it up or down */
+    left: 49.2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 230px; /* Adjust the height as needed */
+    transform-origin: 50% 94.25%; /* Adjust this based on the minute hand's pivot point */
+    transition: transform 1s linear; /* Smooth rotation effect */
+}
+
+.minuteHandImage {
+    height: 230px; /* Adjust the size of the minute hand as needed */
+    width: auto; /* Adjust the size of the minute hand as needed */
+    filter: drop-shadow(2px 2px 2px #5e5e5e); /* Shadow for the minute hand */
+}
+
