@@ -1,19 +1,3 @@
-.secondHandContainer {
-    position: absolute;
-    top: 20.9%; /* Adjust this value to move it up or down */
-    left: 49.35%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 290px; /* Adjust the height as needed */
-    transform-origin: 50% 81.87%; /* Adjust this based on the image's pivot point */
-    transition: transform 1s linear; /* This provides the smooth rotation effect */
-}
-
-.secondHandImage {
-    height: 300px; /* Adjust the size of the second hand as needed */
-    width: auto; /* Adjust the size of the second hand as needed */
-}
 
 .pivotPoint {
     position: absolute;
@@ -26,38 +10,38 @@
     z-index: 10;
 }
 
-.minuteHandContainer {
+/* Common positioning styles for all hand containers */
+.secondHandContainer, .minuteHandContainer, .hourHandContainer {
     position: absolute;
-    top: 23.44%; /* Adjust this value to move it up or down */
-    left: 49.1%;
+    top: 50%;
+    left: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 230px; /* Adjust the height as needed */
-    transform-origin: 50% 94.25%; /* Adjust this based on the minute hand's pivot point */
-    transition: transform 0.5s linear; /* Smooth rotation effect */
 }
 
-.minuteHandImage {
-    height: 230px; /* Adjust the size of the minute hand as needed */
-    width: auto; /* Adjust the size of the minute hand as needed */
+/* Individual adjustments for each hand */
+.secondHandContainer {
+    height: 290px; /* Height of the second hand */
+    transform-origin: 50% 80.8%; /* Pivot point */
+    transition: transform 1s linear;
+}
+
+.minuteHandContainer {
+    height: 230px; /* Height of the minute hand */
+    transform-origin: 50% 94.25%;
+    transition: transform 0.5s linear;
 }
 
 .hourHandContainer {
-    position: absolute;
-    top: 23.44%; /* Adjust this value to move it up or down */
-    left: 49.1%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 190px; /* Adjust the height as needed */
-    transform-origin: 50% 94.25%; /* Adjust this based on the minute hand's pivot point */
-    transition: transform 0.5s linear; /* Smooth rotation effect */
+    height: 190px; /* Height of the hour hand */
+    transform-origin: 50% 94.25%;
+    transform: translateY(-94.25%) translateX(-50%) rotate(var(--rotation-degree-hour-hand));
+    transition: transform 0.5s linear;
 }
 
-.hourHandImage {
-    height: 190px; /* Adjust the size of the minute hand as needed */
-    width: auto; /* Adjust the size of the minute hand as needed */
+.secondHandImage, .minuteHandImage, .hourHandImage {
+    width: auto; /* Adjust as needed */
+    height: 100%; /* Set to 100% of the container's height */
 }
-
 
