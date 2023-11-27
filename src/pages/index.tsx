@@ -31,6 +31,8 @@ export default function Home() {
       </div>
       <MinuteHand degrees={minutesDegrees} />
       <SecondHand degrees={secondsDegrees} />
+      <div className={styles.circleSilver}></div>
+      <div className={styles.circleBlack}></div>
     </main>
   );
 }

@@ -22,4 +22,35 @@
   .backgroundImageContainer > span { /* Targeting the wrapper span element around the Image component */
     position: unset !important;
   }
-  
+
+  .circleSilver {
+    width: 10px; /* Adjust size as needed */
+    height: 10px; /* Adjust size as needed */
+    border-radius: 50%; /* Makes the shape a circle */
+    background-image: linear-gradient(to right, #EFEFEF, #ABABAB, #EFEFEF); /* Shiny silver effect */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed; /* Fixed positioning */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centers the circle */
+    z-index: 20;
+    filter: drop-shadow(-2.5px 0px 2px #5e5e5e);
+}
+
+.circleBlack {
+  width: 5px; /* Adjust size as needed */
+  height: 5px; /* Adjust size as needed */
+  border-radius: 50%; /* Makes the shape a circle */
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed; /* Fixed positioning */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centers the circle */
+  z-index: 21;
+  filter: drop-shadow(-1px 0px 2px #5e5e5e);
+}

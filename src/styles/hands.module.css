@@ -1,7 +1,7 @@
 .secondHandContainer {
     position: absolute;
-    top: 23%; /* Adjust this value to move it up or down */
-    left: 49.5%;
+    top: 20.9%; /* Adjust this value to move it up or down */
+    left: 49.35%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,8 +28,8 @@
 
 .minuteHandContainer {
     position: absolute;
-    top: 25.4%; /* Adjust this value to move it up or down */
-    left: 49.2%;
+    top: 23.44%; /* Adjust this value to move it up or down */
+    left: 49.1%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -42,4 +42,22 @@
     height: 230px; /* Adjust the size of the minute hand as needed */
     width: auto; /* Adjust the size of the minute hand as needed */
 }
+
+.hourHandContainer {
+    position: absolute;
+    top: 23.44%; /* Adjust this value to move it up or down */
+    left: 49.1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 190px; /* Adjust the height as needed */
+    transform-origin: 50% 94.25%; /* Adjust this based on the minute hand's pivot point */
+    transition: transform 0.5s linear; /* Smooth rotation effect */
+}
+
+.hourHandImage {
+    height: 190px; /* Adjust the size of the minute hand as needed */
+    width: auto; /* Adjust the size of the minute hand as needed */
+}
+
 
