@@ -22,22 +22,21 @@
 
 /* Individual adjustments for each hand */
 .secondHandContainer {
-    height: 290px; /* Height of the second hand */
+    height: 288px; /* Height of the second hand */
     transform-origin: 50% 80.8%; /* Pivot point */
     transition: transform 1s linear;
 }
 
 .minuteHandContainer {
-    height: 230px; /* Height of the minute hand */
+    height: 220px; /* Height of the minute hand */
     transform-origin: 50% 94.25%;
     transition: transform 0.5s linear;
 }
 
 .hourHandContainer {
-    height: 190px; /* Height of the hour hand */
-    transform-origin: 50% 94.25%;
-    transform: translateY(-94.25%) translateX(-50%) rotate(var(--rotation-degree-hour-hand));
-    transition: transform 0.5s linear;
+    height: 168px; /* Height of the hour hand */
+    transform-origin: 50% 90.7%;
+    transition: transform 1s linear;
 }
 
 .secondHandImage, .minuteHandImage, .hourHandImage {

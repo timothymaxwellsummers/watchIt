@@ -2,6 +2,7 @@ import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 import SecondHand from '../components/SecondHand';
 import MinuteHand from '../components/MinuteHand';
+import HourHand from '../components/HourHand';  
 import styles from '../styles/index.module.css'; // Ensure you have this CSS module
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
   // Keep increasing degrees beyond 360
   const secondsDegrees = (currentTime.getMinutes() * 60 + currentTime.getSeconds()) * 6;
   const minutesDegrees = currentTime.getMinutes() * 6;
+  const hoursDegrees = currentTime.getHours() * 30 + currentTime.getMinutes() * 0.5;
 
   return (
     <main className={styles.mainContainer}>
@@ -29,6 +31,7 @@ export default function Home() {
           objectFit="cover" // This keeps the aspect ratio and covers the area
         />
       </div>
+      <HourHand degrees={hoursDegrees} />
       <MinuteHand degrees={minutesDegrees} />
       <SecondHand degrees={secondsDegrees} />
       <div className={styles.circleSilver}></div>
