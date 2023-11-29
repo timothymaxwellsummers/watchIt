@@ -3,7 +3,8 @@ import React, { useEffect, useState } from 'react';
 import SecondHand from '../components/SecondHand';
 import MinuteHand from '../components/MinuteHand';
 import HourHand from '../components/HourHand';  
-import styles from '../styles/index.module.css'; // Ensure you have this CSS module
+import DateDisplay from '../components/Date';
+import styles from '../styles/index.module.css';
 
 export default function Home() {
   const [currentTime, setCurrentTime] = useState(new Date());
@@ -30,6 +31,7 @@ export default function Home() {
           layout="fill" // This makes the image fill the container
           objectFit="cover" // This keeps the aspect ratio and covers the area
         />
+        <DateDisplay />
       </div>
       <HourHand degrees={hoursDegrees} />
       <MinuteHand degrees={minutesDegrees} />

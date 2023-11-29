@@ -14,7 +14,6 @@
     left: 50%;
     transform: translate(-50%, -50%); /* This will center the div */
     z-index: -1; /* Ensures it stays behind the second hand */
-  
     width: 500px; /* Adjust the width as needed */
     height: 500px; /* Adjust the height as needed */
   }

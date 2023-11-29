@@ -1,0 +1,12 @@
+.dateContainer {
+    position: absolute; /* Position relative to watchFace */
+    width: 30px; /* Adjust size as needed */
+    height: 20px; /* Adjust size as needed */
+    top: 90%; /* Adjust to align with the specific point on the image */
+    left: 50%; /* Adjust to align with the specific point on the image */
+    transform: translate(-50%, -50%); /* Adjust for precise positioning */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+  }
