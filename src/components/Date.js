@@ -10,7 +10,7 @@ export default function DateDisplay() {
 
     return (
         <div className={dateStyles.dateContainer}>
-            {dateNumber}
+            <div style={{transform: "scale(1, 2)", marginTop:"-5px"}}>{dateNumber}</div>
         </div>
     );
 }

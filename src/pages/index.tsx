@@ -5,6 +5,7 @@ import MinuteHand from '../components/MinuteHand';
 import HourHand from '../components/HourHand';  
 import DateDisplay from '../components/Date';
 import styles from '../styles/index.module.css';
+import dateStyles from '../styles/date.module.css';
 
 export default function Home() {
   const [currentTime, setCurrentTime] = useState(new Date());

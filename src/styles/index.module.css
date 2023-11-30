@@ -51,5 +51,4 @@
   left: 50%;
   transform: translate(-50%, -50%); /* Centers the circle */
   z-index: 21;
-  filter: drop-shadow(-1px 0px 2px #5e5e5e);
 }

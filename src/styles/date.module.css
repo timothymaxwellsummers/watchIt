@@ -1,12 +1,17 @@
 .dateContainer {
     position: absolute; /* Position relative to watchFace */
-    width: 30px; /* Adjust size as needed */
-    height: 20px; /* Adjust size as needed */
-    top: 90%; /* Adjust to align with the specific point on the image */
+    width: 41px; /* Adjust size as needed */
+    height: 63px; /* Adjust size as needed */
+    border-radius: 3px;
+    top: 90.2%; /* Adjust to align with the specific point on the image */
     left: 50%; /* Adjust to align with the specific point on the image */
     transform: translate(-50%, -50%); /* Adjust for precise positioning */
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 20;
+    background-color: #e0e0e0;
+    box-shadow: inset 0px 0px 5px #5e5e5e;
+    font-family: 'Barlow', sans-serif;
+    font-size: 30px;
   }
