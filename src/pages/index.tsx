@@ -6,6 +6,7 @@ import HourHand from '../components/HourHand';
 import DateDisplay from '../components/Date';
 import StopWatch from '../components/StopWatch';
 import styles from '../styles/index.module.css';
+import Info from '../components/Info';
 
 export default function Home() {
   const [currentTime, setCurrentTime] = useState(new Date());
@@ -25,9 +26,9 @@ export default function Home() {
 
   return (
     <>
+      <Info />
       <main className={styles.mainContainer}>
         <div className={styles.backgroundImageContainer}>
-          <StopWatch />
           <Image
             src="/CartierWatchfaceTrans.png" // Replace with your image path
             alt="Background"

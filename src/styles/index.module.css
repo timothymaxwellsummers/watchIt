@@ -1,7 +1,7 @@
 .mainContainer {
   position: relative;
   /* Needed for absolute positioning of the image */
-  height: 100vh;
+  height: 90vh;
   /* Full viewport height */
   width: 100vw;
   /* Full viewport width */
@@ -74,9 +74,18 @@
   z-index: 21;
 }
 
-.switchContainer{
-  top: 105%;
-  left: 0%;
-  position: absolute;
-  z-index: 50;
+.infoIcon {
+  float: right;
+  margin-top: 15px;
+  margin-right: 15px;
+  transform: scale(1.2);
+  color: #b2b2b2;
+}
+
+.infoIcon:hover {
+  color: #000000;
+}
+
+.linkStyle {
+  text-decoration: underline;
 }
