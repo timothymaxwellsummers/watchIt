@@ -6,6 +6,7 @@ import HourHand from '../components/HourHand';
 import DateDisplay from '../components/Date';
 import styles from '../styles/index.module.css';
 import Info from '../components/Info';
+import StopWatch from '../components/StopWatch';
 import { useStopWatch } from '../components/StopWatchContext';
 
 export default function Home() {
@@ -27,28 +28,28 @@ export default function Home() {
 
   return (
     <>
-        <Info />t
-        <main className={styles.mainContainer}>
+      <Info />
+      <main className={styles.mainContainer}>
+        <div className={styles.backgroundImageContainer}>
           {stopWatchMode ? (
-            <div>Stopwatch Mode is ON</div>
+            <StopWatch />
           ) : (
-            <div>Normal Mode</div>
+            <></>
           )}
-          <div className={styles.backgroundImageContainer}>
-            <Image
-              src="/CartierWatchfaceTrans.png" // Replace with your image path
-              alt="Background"
-              layout="fill" // This makes the image fill the container
-              objectFit="cover" // This keeps the aspect ratio and covers the area
-            />
-            <DateDisplay />
-          </div>
-          <HourHand degrees={hoursDegrees} />
-          <MinuteHand degrees={minutesDegrees} />
-          <SecondHand degrees={secondsDegrees} />
-          <div className={styles.circleSilver}></div>
-          <div className={styles.circleBlack}></div>
-        </main>
+          <Image
+            src="/CartierWatchfaceTrans.png" // Replace with your image path
+            alt="Background"
+            layout="fill" // This makes the image fill the container
+            objectFit="cover" // This keeps the aspect ratio and covers the area
+          />
+          <DateDisplay />
+        </div>
+        <HourHand degrees={hoursDegrees} />
+        <MinuteHand degrees={minutesDegrees} />
+        <SecondHand degrees={secondsDegrees} />
+        <div className={styles.circleSilver}></div>
+        <div className={styles.circleBlack}></div>
+      </main>
     </>
   );
 }
