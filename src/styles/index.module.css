@@ -89,9 +89,3 @@
 .linkStyle {
   text-decoration: underline;
 }
-
-.stopWatchContainer {
-  position: absolute;
-  top: -15%; /* Adjust to align with the specific point on the image */
-  left: 50%;
-}

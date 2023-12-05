@@ -8,9 +8,10 @@ export function useStopWatch() {
 
 export function StopWatchProvider({ children }) {
   const [stopWatchMode, setStopWatchMode] = useState(false);
+  const [elapsedTime, setElapsedTime] = useState(0);
 
   return (
-    <StopWatchContext.Provider value={{ stopWatchMode, setStopWatchMode }}>
+    <StopWatchContext.Provider value={{ stopWatchMode, setStopWatchMode, elapsedTime, setElapsedTime}}>
       {children}
     </StopWatchContext.Provider>
   );

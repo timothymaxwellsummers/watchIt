@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import styles from '../styles/index.module.css';
+import { useStopWatch } from './StopWatchContext';
+import styles from '../styles/stopWatch.module.css';
 
 function Stopwatch() {
     const [isActive, setIsActive] = useState(false);
-    const [elapsedTime, setElapsedTime] = useState(0);
+    const { elapsedTime, setElapsedTime } = useStopWatch();
 
     useEffect(() => {
         let interval = null;
@@ -17,7 +18,7 @@ function Stopwatch() {
         }
 
         return () => clearInterval(interval);
-    }, [isActive]);
+    }, [isActive, setElapsedTime]);
 
     const handleStartStop = () => {
         setIsActive(!isActive);
