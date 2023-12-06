@@ -1,12 +1,18 @@
-.switchContainer{
-    top: 105%;
-    left: 0%;
-    position: absolute;
-    z-index: 50;
-  }
+.stopWatchTime {
+  position: absolute;
+  top: -15%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Chivo Mono', monospace;
+    font-size: 30px;
+}
 
-  .stopWatchContainer {
-    position: absolute;
-    top: -15%; /* Adjust to align with the specific point on the image */
-    left: 50%;
-  }
+.stopWatchButtonContainer {
+  position: absolute;
+  top: 105%;
+  left: 50%;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  transform: translateX(-50%);
+}

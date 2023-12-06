@@ -38,16 +38,19 @@ function Stopwatch() {
     };
 
     return (
-        <div className={styles.stopWatchContainer}>
-            <h2>Stopwatch</h2>
-            <p>Elapsed Time: {formatTime(elapsedTime)}</p>
-            <button onClick={handleStartStop}>
+        <>
+        <div className={styles.stopWatchTime}>
+            <p>{formatTime(elapsedTime)}</p>
+        </div>
+        <div className={styles.stopWatchButtonContainer}>
+        <button onClick={handleStartStop}>
                 {isActive ? 'Stop' : 'Start'}
             </button>
             <button onClick={handleReset} disabled={isActive}>
                 Reset
             </button>
         </div>
+        </>
     );
 }
 
