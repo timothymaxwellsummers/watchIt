@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useStopWatch } from './StopWatchContext';
 import styles from '../styles/stopWatch.module.css';
+import { Button } from "@/components/ui/button"
 
 function Stopwatch() {
     const [isActive, setIsActive] = useState(false);
@@ -43,12 +44,8 @@ function Stopwatch() {
             <p>{formatTime(elapsedTime)}</p>
         </div>
         <div className={styles.stopWatchButtonContainer}>
-        <button onClick={handleStartStop}>
-                {isActive ? 'Stop' : 'Start'}
-            </button>
-            <button onClick={handleReset} disabled={isActive}>
-                Reset
-            </button>
+        <Button variant="outline" onClick={handleStartStop}>{isActive ? 'Stop' : 'Start'}</Button>
+        <Button variant="outline" onClick={handleReset} disabled={isActive}>Reset</Button>
         </div>
         </>
     );

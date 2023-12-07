@@ -9,10 +9,11 @@
 
 .stopWatchButtonContainer {
   position: absolute;
-  top: 105%;
+  top: 110%;
   left: 50%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 10px;
   width: 100%;
   transform: translateX(-50%);
 }
