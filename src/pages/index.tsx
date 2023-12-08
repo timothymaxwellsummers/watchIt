@@ -37,7 +37,7 @@ export default function Home() {
             <></>
           )}
           <Image
-            src="/CartierWatchfaceTrans.png" // Replace with your image path
+            src="/CartierWatchface.png" // Replace with your image path
             alt="Background"
             layout="fill" // This makes the image fill the container
             objectFit="cover" // This keeps the aspect ratio and covers the area
