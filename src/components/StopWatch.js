@@ -59,8 +59,11 @@ function Stopwatch() {
                 <p>{formatTime(elapsedTime)}</p>
             </div>
             <div className={styles.stopWatchButtonContainer}>
-                <Button variant="outline" onClick={handleStartStop}>{isActive ? 'Stop' : 'Start'}&nbsp;<SpaceBarIcon className={styles.space}/></Button>
+                <Button variant="outline" onClick={handleStartStop}>{isActive ? 'Stop' : 'Start'}</Button>
                 <Button variant="outline" onClick={handleReset} disabled={isActive}>Reset</Button>
+            </div>
+            <div className={styles.stopWatchToolTip}>
+                Or press <SpaceBarIcon className={styles.space} /> to start/stop
             </div>
         </>
     );
