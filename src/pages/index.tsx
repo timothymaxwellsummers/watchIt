@@ -21,6 +21,40 @@ export default function Home() {
     return () => clearInterval(interval);
   }, []);
 
+  useEffect(() => {
+    if ('wakeLock' in navigator) {
+      // @ts-ignore
+      let wakeLock = null;
+
+      const requestWakeLock = async () => {
+        try {
+          wakeLock = await navigator.wakeLock.request('screen');
+          wakeLock.addEventListener('release', () => {
+            // @ts-ignore
+            console.log('Screen Wake Lock released:', wakeLock.released);
+          });
+          // @ts-ignore
+          console.log('Screen Wake Lock active:', wakeLock.active);
+        } catch (err) {
+          // @ts-ignore
+          console.error(`${err.name}, ${err.message}`);
+        }
+      };
+
+      requestWakeLock();
+
+      // Re-acquire the wake lock if the page becomes visible again.
+      document.addEventListener('visibilitychange', async () => {
+        // @ts-ignore
+        if (wakeLock !== null && document.visibilityState === 'visible') {
+          await requestWakeLock();
+        }
+      });
+    } else {
+      console.log('Screen Wake Lock API not supported');
+    }
+  }, []);
+
   // Keep increasing degrees beyond 360
   const secondsDegrees = stopWatchMode ? (elapsedTime / 1000) * 6 : (currentTime.getMinutes() * 60 + currentTime.getSeconds()) * 6;
   const minutesDegrees = currentTime.getMinutes() * 6;
@@ -42,6 +76,8 @@ export default function Home() {
             layout="fill" // This makes the image fill the container
             objectFit="cover" // This keeps the aspect ratio and covers the area
           />
+          {/* @ts-ignore */}
+
           <DateDisplay />
         </div>
         <HourHand degrees={hoursDegrees} />
