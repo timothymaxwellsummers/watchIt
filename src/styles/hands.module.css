@@ -44,3 +44,14 @@
     height: 100%; /* Set to 100% of the container's height */
 }
 
+@media only screen and (max-width: 543px) {
+    .secondHandContainer {
+        height: 216px;
+    }
+    .minuteHandContainer {
+        height: 165px;
+    }
+    .hourHandContainer {
+        height: 126px;
+    }
+}

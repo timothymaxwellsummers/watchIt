@@ -13,13 +13,13 @@ export default function MinuteHand({ degrees }) {
             containerRef.current.style.transition = 'none';
 
             // Instantly jump to the desired degrees
-            containerRef.current.style.transform = `translateY(-80.8%) translateX(-50%) rotate(${degrees}deg)`;
+            containerRef.current.style.transform = `translateY(-94.25%) translateX(-50%) rotate(${degrees}deg)`;
 
             // Force a reflow
             void containerRef.current.offsetWidth;
 
             // Re-enable the animation and carry on as usual
-            containerRef.current.style.transition = 'transform 1s linear';
+            containerRef.current.style.transition = 'transform 0.5s linear';
         }
 
         prevDegrees.current = degrees;

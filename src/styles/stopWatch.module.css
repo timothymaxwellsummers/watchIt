@@ -33,3 +33,12 @@
 .space {
   transform: scale(0.6);
 }
+
+@media only screen and (max-width: 543px) {
+  .stopWatchTime {
+    font-size: 25px;
+  }
+  .stopWatchToolTip {
+    opacity: 0;
+  }
+}

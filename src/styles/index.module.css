@@ -89,3 +89,19 @@
 .linkStyle {
   text-decoration: underline;
 }
+
+@media only screen and (max-width: 543px) {
+  .backgroundImageContainer
+   {
+    width: 380px;
+    height: 380px;
+  }
+  .circleSilver {
+    width: 8px;
+    height: 8px;
+  }
+  .circleBlack {
+    width: 4px;
+    height: 4px;
+  }
+}
