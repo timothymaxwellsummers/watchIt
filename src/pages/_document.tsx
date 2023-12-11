@@ -4,6 +4,7 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
+        <meta httpEquiv="ScreenOrientation" content="autoRotate:disabled" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         {/* @ts-ignore */}
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

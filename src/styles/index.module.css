@@ -104,4 +104,8 @@
     width: 4px;
     height: 4px;
   }
+
+  .mainContainer {
+    height: 80vh;
+  }
 }
