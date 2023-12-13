@@ -1,6 +1,6 @@
 # ⏱️ WatchIt - A personal design and coding challenge
 
-This is the main repository for WatchIt a personal project of mine. As I use timers to track my workouts I thought it would be cool to build some watches inspired by classic watches. This project is currently 🚧 w.i.p but will be hosted soon. 
+This is the main repository for WatchIt a personal project of mine. As I use timers to track my workouts I thought it would be cool to build some watches inspired by classic watches. This project is currently 🚧 w.i.p but will be hosted soon. An early version can be found here [watchIt](https://watch-it-ebon.vercel.app/)
 The goal is to have multiple watch faces to swipe through including the classic casio, omega seamaster, rolex daytona etc... each supporting individual features. 
 
 ## Current State and Process
