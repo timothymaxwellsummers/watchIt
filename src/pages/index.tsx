@@ -1,14 +1,7 @@
-import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
-import SecondHand from '../components/SecondHand';
-import MinuteHand from '../components/MinuteHand';
-import HourHand from '../components/HourHand';
-import DateDisplay from '../components/Date';
-import styles from '../styles/index.module.css';
-import Info from '../components/Info';
-import StopWatch from '../components/StopWatch';
 import Cartier from '../components/WatchFaces/Cartier';
 import { useStopWatch } from '../components/StopWatchContext';
+import Slider from "react-slick";
 
 export default function Home() {
   const [currentTime, setCurrentTime] = useState(new Date());
@@ -56,14 +49,28 @@ export default function Home() {
     }
   }, []);
 
+  // Settings for react-slick carousel
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+    adaptiveHeight: true
+  };
+
   // Keep increasing degrees beyond 360
   const secondsDegrees = stopWatchMode ? (elapsedTime / 1000) * 6 : (currentTime.getMinutes() * 60 + currentTime.getSeconds()) * 6;
   const minutesDegrees = currentTime.getMinutes() * 6;
   const hoursDegrees = currentTime.getHours() * 30 + currentTime.getMinutes() * 0.5;
 
   return (
-    <>
-      <Cartier secondsDegrees={secondsDegrees} minutesDegrees={minutesDegrees} hoursDegrees={hoursDegrees}/>
-    </>
+    <div style={{ position: 'relative', height: '98vh', width: '98vw' }}>
+      <Slider {...settings}>
+        <Cartier secondsDegrees={secondsDegrees} minutesDegrees={minutesDegrees} hoursDegrees={hoursDegrees}/>
+        <Cartier secondsDegrees={secondsDegrees} minutesDegrees={minutesDegrees} hoursDegrees={hoursDegrees}/>
+      </Slider>
+    </div>
   );
 }

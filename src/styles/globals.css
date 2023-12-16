@@ -44,3 +44,22 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Example CSS */
+.slick-slide {
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Adjust dots and arrows as needed */
+.slick-dots {
+  top: 85%;
+  left: 12,52%;
+  z-index: 100; /* Ensure it's above the content */
+}
+
+.slick-prev, .slick-next {
+  z-index: 100; /* Ensure arrows are above the content */
+}
