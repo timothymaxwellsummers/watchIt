@@ -7,6 +7,7 @@ import DateDisplay from '../components/Date';
 import styles from '../styles/index.module.css';
 import Info from '../components/Info';
 import StopWatch from '../components/StopWatch';
+import Cartier from '../components/WatchFaces/Cartier';
 import { useStopWatch } from '../components/StopWatchContext';
 
 export default function Home() {
@@ -62,30 +63,7 @@ export default function Home() {
 
   return (
     <>
-      <Info />
-      <main className={styles.mainContainer}>
-        <div className={styles.backgroundImageContainer}>
-          {stopWatchMode ? (
-            <StopWatch />
-          ) : (
-            <></>
-          )}
-          <Image
-            src="/CartierWatchface.png" // Replace with your image path
-            alt="Background"
-            layout="fill" // This makes the image fill the container
-            objectFit="cover" // This keeps the aspect ratio and covers the area
-          />
-          {/* @ts-ignore */}
-
-          <DateDisplay />
-        </div>
-        <HourHand degrees={hoursDegrees} />
-        <MinuteHand degrees={minutesDegrees} />
-        <SecondHand degrees={secondsDegrees} />
-        <div className={styles.circleSilver}></div>
-        <div className={styles.circleBlack}></div>
-      </main>
+      <Cartier secondsDegrees={secondsDegrees} minutesDegrees={minutesDegrees} hoursDegrees={hoursDegrees}/>
     </>
   );
 }
