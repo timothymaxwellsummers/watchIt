@@ -66,7 +66,7 @@ export default function Home() {
   const hoursDegrees = currentTime.getHours() * 30 + currentTime.getMinutes() * 0.5;
 
   return (
-    <div style={{ position: 'relative', height: '98vh', width: '98vw' }}>
+    <div style={{ position: 'relative', }}>
       <Slider {...settings}>
         <Cartier secondsDegrees={secondsDegrees} minutesDegrees={minutesDegrees} hoursDegrees={hoursDegrees}/>
         <Cartier secondsDegrees={secondsDegrees} minutesDegrees={minutesDegrees} hoursDegrees={hoursDegrees}/>

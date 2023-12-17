@@ -45,6 +45,11 @@
   }
 }
 
+html, body {
+  overflow-x: hidden ;
+  overflow-y: hidden ;
+}
+
 /* Example CSS */
 .slick-slide {
   height: 100vh; /* Full viewport height */
@@ -57,8 +62,8 @@
 .slick-dots {
   top: 85%;
   left: 12,52%;
-  z-index: 100; /* Ensure it's above the content */
 }
+
 
 .slick-prev, .slick-next {
   z-index: 100; /* Ensure arrows are above the content */
