@@ -27,6 +27,14 @@
     transition: transform 1s linear;
 }
 
+.secondHandContainer .cartierSecond{
+    transform-origin: 50% 80.8%; /* Pivot point */
+}
+
+.secondHandContainer .seamasterSecond{
+    transform-origin: 50% 80.8%; /* Pivot point */
+}
+
 .minuteHandContainer {
     height: 220px; /* Height of the minute hand */
     transform-origin: 50% 94.25%;
