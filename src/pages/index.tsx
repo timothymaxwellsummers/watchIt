@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import Cartier from '../components/WatchFaces/Cartier';
+import { watchFaces } from '../components/WatchFaces/WatchfaceData';
+import WatchFace from '../components/WatchFaces/WatchFace';
 import { useStopWatch } from '../components/StopWatchContext';
 import Slider from "react-slick";
 
@@ -68,8 +69,15 @@ export default function Home() {
   return (
     <div style={{ position: 'relative', }}>
       <Slider {...settings}>
-        <Cartier secondsDegrees={secondsDegrees} minutesDegrees={minutesDegrees} hoursDegrees={hoursDegrees}/>
-        <Cartier secondsDegrees={secondsDegrees} minutesDegrees={minutesDegrees} hoursDegrees={hoursDegrees}/>
+      {watchFaces.map(watchFace => (
+          <WatchFace
+            key={watchFace.name}
+            data={watchFace}
+            secondsDegrees={secondsDegrees}
+            minutesDegrees={minutesDegrees}
+            hoursDegrees={hoursDegrees}
+          />
+        ))}
       </Slider>
     </div>
   );

@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import SecondHand from '../SecondHand';
 import MinuteHand from '../MinuteHand';
@@ -9,8 +8,9 @@ import Info from '../Info';
 import StopWatch from '../StopWatch';
 import { useStopWatch } from '../StopWatchContext';
 
-const Cartier = ({ hoursDegrees, minutesDegrees, secondsDegrees }) => {
+const WatchFace = ({ data, hoursDegrees, minutesDegrees, secondsDegrees }) => {
     const { stopWatchMode, elapsedTime } = useStopWatch();
+    const { imageUrl, backgroundColor, /* other properties */ } = data;
 
     return (
         <>
@@ -23,7 +23,7 @@ const Cartier = ({ hoursDegrees, minutesDegrees, secondsDegrees }) => {
                         <></>
                     )}
                     <Image
-                        src="/CartierWatchface.png" // Replace with your image path
+                        src={imageUrl} // Replace with your image path
                         alt="Background"
                         layout="fill" // This makes the image fill the container
                         objectFit="cover" // This keeps the aspect ratio and covers the area
@@ -42,4 +42,4 @@ const Cartier = ({ hoursDegrees, minutesDegrees, secondsDegrees }) => {
     );
 };
 
-export default Cartier;
+export default WatchFace;
