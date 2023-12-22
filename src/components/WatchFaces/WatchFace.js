@@ -1,7 +1,7 @@
 import Image from 'next/image';
-import SecondHand from '../SecondHand';
-import MinuteHand from '../MinuteHand';
-import HourHand from '../HourHand';
+import SecondHand from '../Hands/CartierHands/CartierSecondHand';
+import MinuteHand from '../Hands/CartierHands/CartierMinuteHand';
+import HourHand from '../Hands/CartierHands/CartierHourHand';
 import DateDisplay from '../Date';
 import styles from '../../styles/index.module.css';
 import Info from '../Info';
@@ -12,8 +12,15 @@ const WatchFace = ({ data, hoursDegrees, minutesDegrees, secondsDegrees }) => {
     const { stopWatchMode, elapsedTime } = useStopWatch();
     const { imageUrl, backgroundColor, /* other properties */ } = data;
 
+    const style = {
+        backgroundColor: backgroundColor,
+        minHeight: '100vh', 
+        minWidth: '100vw'
+        /* other styling based on passed props */
+      };
+
     return (
-        <>
+        <div style={style}>
             <Info />
             <main className={styles.mainContainer}>
                 <div className={styles.backgroundImageContainer}>
@@ -38,7 +45,7 @@ const WatchFace = ({ data, hoursDegrees, minutesDegrees, secondsDegrees }) => {
                 <div className={styles.circleSilver}></div>
                 <div className={styles.circleBlack}></div>
             </main>
-        </>
+        </div >
     );
 };
 

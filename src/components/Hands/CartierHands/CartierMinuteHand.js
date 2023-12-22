@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import handStyles from '../styles/hands.module.css';
+import handStyles from '../../../styles/hands.module.css';
 
 export default function MinuteHand({ degrees }) {
     const containerRef = useRef(null);

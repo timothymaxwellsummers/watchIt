@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
-import handStyles from '../styles/hands.module.css';
+import handStyles from '../../../styles/hands.module.css';
 
-export default function SecondHand({ degrees }) {
+export default function HourHand({ degrees }) {
     const containerRef = useRef(null);
     const prevDegrees = useRef(degrees);
 
@@ -13,7 +13,7 @@ export default function SecondHand({ degrees }) {
             containerRef.current.style.transition = 'none';
 
             // Instantly jump to the desired degrees
-            containerRef.current.style.transform = `translateY(-80.8%) translateX(-50%) rotate(${degrees}deg)`;
+            containerRef.current.style.transform = `translateY(-90.7%) translateX(-50%) rotate(${degrees}deg)`;
 
             // Force a reflow
             void containerRef.current.offsetWidth;
@@ -25,14 +25,15 @@ export default function SecondHand({ degrees }) {
         prevDegrees.current = degrees;
     }, [degrees]);
 
+    // Style for rotating the minute hand
     const rotationStyle = {
-        transform: `translateY(-80.8%) translateX(-50%) rotate(${degrees}deg)`,
+        transform: `translateY(-90.7%) translateX(-50%) rotate(${degrees}deg)`,
         filter: `drop-shadow(${Math.sin((degrees - 90) * (Math.PI / 180)) * 2.5}px ${Math.cos((degrees - 90) * (Math.PI / 180)) * 2.5}px 2px #5e5e5e)`
     };
 
     return (
-        <div ref={containerRef} className={handStyles.secondHandContainer} style={rotationStyle}>
-            <img src={"/secondHand.png"} alt="Second Hand" className={handStyles.secondHandImage}/>
+        <div ref={containerRef} className={handStyles.hourHandContainer} style={rotationStyle}>
+            <img src={"/hourHand.png"} alt="Second Hand" className={handStyles.hourHandImage}/>
         </div>
     );
 }
