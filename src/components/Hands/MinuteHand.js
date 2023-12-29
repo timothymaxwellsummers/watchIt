@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
-import handStyles from '../../../styles/hands.module.css';
+import handStyles from '../../styles/hands.module.css';
 
-export default function MinuteHand({ degrees }) {
+export default function MinuteHand({ degrees, name }) {
     const containerRef = useRef(null);
     const prevDegrees = useRef(degrees);
 
@@ -34,7 +34,11 @@ export default function MinuteHand({ degrees }) {
 
     return (
         <div ref={containerRef} className={handStyles.minuteHandContainer} style={rotationStyle}>
-            <img src={"/minuteHand.png"} alt="Minute Hand" className={handStyles.minuteHandImage} />
+            {name === "Cartier" ? (
+                <img src={"/minuteHand.png"} alt="Minute Hand" className={handStyles.minuteHandImage} />
+            ) : (
+                <img src={"/SeamasterMinuteHand.png"} alt="Minute Hand" className={handStyles.minuteHandImage} />
+            )}
         </div>
     );
 }

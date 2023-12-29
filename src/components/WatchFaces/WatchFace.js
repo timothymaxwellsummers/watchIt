@@ -1,5 +1,7 @@
 import Image from 'next/image';
-import HandsController from '../Hands/HandsController';
+import SecondHand from '../Hands/SecondHand';
+import MinuteHand from '../Hands/MinuteHand';
+import HourHand from '../Hands/HourHand';
 import DateDisplay from '../Date';
 import styles from '../../styles/index.module.css';
 import Info from '../Info';
@@ -33,16 +35,11 @@ const WatchFace = ({ data, hoursDegrees, minutesDegrees, secondsDegrees }) => {
                         layout="fill" // This makes the image fill the container
                         objectFit="cover" // This keeps the aspect ratio and covers the area
                     />
-                    {/* @ts-ignore */}
-
                     <DateDisplay />
                 </div>
-                <HandsController
-                    secondDegrees={secondsDegrees}
-                    minuteDegrees={minutesDegrees}
-                    hourDegrees={hoursDegrees}
-                    name={name}  
-                />
+                <HourHand degrees={hoursDegrees} name={name} />
+                <MinuteHand degrees={minutesDegrees} name={name} />
+                <SecondHand degrees={secondsDegrees} name={name} />
                 <div className={styles.circleSilver}></div>
                 <div className={styles.circleBlack}></div>
             </main>
