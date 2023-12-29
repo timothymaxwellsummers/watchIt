@@ -1,0 +1,28 @@
+.seamasterMinute, .cartierMinute  {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s linear;
+}
+
+.seamasterMinute {
+    height: 240px; /* Height of the minute hand */
+    transform-origin: 50% 92%;
+}
+
+.cartierMinute {
+    height: 220px; /* Height of the minute hand */
+    transform-origin: 50% 94.25%;
+}
+
+@media only screen and (max-width: 543px) {
+    .seamasterMinute {
+        height: 165px;
+    }
+    .cartierMinute {
+        height: 165px;
+    }
+}
