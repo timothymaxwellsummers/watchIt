@@ -58,12 +58,17 @@ html, body {
   justify-content: center;
 }
 
+
 /* Adjust dots and arrows as needed */
 .slick-dots {
   top: 80%;
   left: 12,52%;
+  pointer-events: none; 
 }
 
+.slick-dots li {
+  pointer-events: auto; 
+}
 
 .slick-prev, .slick-next {
   z-index: 100; /* Ensure arrows are above the content */
