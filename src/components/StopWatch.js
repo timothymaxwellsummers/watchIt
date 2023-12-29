@@ -5,22 +5,7 @@ import { Button } from "@/components/ui/button";
 import SpaceBarIcon from '@mui/icons-material/SpaceBar';
 
 function Stopwatch() {
-    const [isActive, setIsActive] = useState(false);
-    const { elapsedTime, setElapsedTime } = useStopWatch();
-
-    useEffect(() => {
-        let interval = null;
-
-        if (isActive) {
-            interval = setInterval(() => {
-                setElapsedTime(prevElapsedTime => prevElapsedTime + 10); // Update in 10ms intervals
-            }, 10);
-        } else {
-            clearInterval(interval);
-        }
-
-        return () => clearInterval(interval);
-    }, [isActive, setElapsedTime]);
+    const { isActive, setIsActive, elapsedTime, setElapsedTime } = useStopWatch();
 
     useEffect(() => {
         const handleKeyPress = (event) => {
