@@ -86,7 +86,7 @@ export default function Home() {
 
   return (
     <div style={{ position: 'relative', }}>
-          <style>{dotStylesString}</style> {/* Include the dynamic styles */}
+      <style>{dotStylesString}</style> {/* Include the dynamic styles */}
       <Slider {...settings}>
       {watchFaces.map(watchFace => (
           <WatchFace
