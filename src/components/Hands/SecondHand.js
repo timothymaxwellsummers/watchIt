@@ -14,7 +14,7 @@ export default function SecondHand({ degrees, name }) {
             containerRef.current.style.transition = 'none';
 
             // Instantly jump to the desired degrees
-            containerRef.current.style.transform = `translateY(-80.8%) translateX(-50%) rotate(${degrees}deg)`;
+            containerRef.current.style.transform = name === 'Cartier' ? `translateY(-80.8%) translateX(-50%) rotate(${degrees}deg)` : `translateY(-77.4%) translateX(-50%) rotate(${degrees}deg)`;
 
             // Force a reflow
             void containerRef.current.offsetWidth;

@@ -31,6 +31,7 @@
     height: 220px; /* Height of the minute hand */
     transform-origin: 50% 94.25%;
     transition: transform 0.5s linear;
+    opacity: 0;
 }
 
 .hourHandContainer {

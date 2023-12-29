@@ -1,0 +1,28 @@
+.seamasterHour, .cartierHour  {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 1s linear;
+}
+
+.seamasterHour {
+    height: 160px; /* Height of the hour hand */
+    transform-origin: 50% 85.5%;
+}
+
+.cartierHour {
+    height: 168px; /* Height of the hour hand */
+    transform-origin: 50% 90.7%;
+}
+
+@media only screen and (max-width: 543px) {
+    .seamasterHour {
+        height: 126px;
+    }
+    .cartierHour {
+        height: 126px;
+    }
+}
