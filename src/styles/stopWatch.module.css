@@ -43,3 +43,15 @@
     opacity: 0;
   }
 }
+
+.buttonBg {
+  background-color: #003154;
+  color: #fff;
+  border-color: #39526C;
+}
+
+.buttonBg:hover {
+  background-color: rgb(52, 81, 111, 0.5);
+  color: #fff;
+
+}

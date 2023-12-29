@@ -4,7 +4,7 @@ import styles from '../styles/stopWatch.module.css';
 import { Button } from "@/components/ui/button";
 import SpaceBarIcon from '@mui/icons-material/SpaceBar';
 
-function Stopwatch() {
+function Stopwatch({ name }) {
     const { isActive, setIsActive, elapsedTime, setElapsedTime } = useStopWatch();
 
     useEffect(() => {
@@ -40,12 +40,12 @@ function Stopwatch() {
 
     return (
         <>
-            <div className={styles.stopWatchTime}>
+            <div className={styles.stopWatchTime} style={name === "Cartier" ? {color: "#000"} : {color: "#fff"}}>
                 <p>{formatTime(elapsedTime)}</p>
             </div>
             <div className={styles.stopWatchButtonContainer}>
-                <Button variant="outline" onClick={handleStartStop}>{isActive ? 'Stop' : 'Start'}</Button>
-                <Button variant="outline" onClick={handleReset} disabled={isActive}>Reset</Button>
+                <Button variant="outline" onClick={handleStartStop} className={name === "Cartier" ? styles : styles.buttonBg}>{isActive ? 'Stop' : 'Start'}</Button>
+                <Button variant="outline" onClick={handleReset} disabled={isActive} className={name === "Cartier" ? styles : styles.buttonBg}>Reset</Button>
             </div>
             <div className={styles.stopWatchToolTip}>
                 Or press <SpaceBarIcon className={styles.space} /> to start/stop

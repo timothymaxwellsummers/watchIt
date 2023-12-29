@@ -25,7 +25,7 @@ const WatchFace = ({ data, hoursDegrees, minutesDegrees, secondsDegrees }) => {
             <main className={styles.mainContainer}>
                 <div className={styles.backgroundImageContainer}>
                     {stopWatchMode ? (
-                        <StopWatch />
+                        <StopWatch name={name}/>
                     ) : (
                         <></>
                     )}
