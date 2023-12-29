@@ -23,6 +23,7 @@
 /* Individual adjustments for each hand */
 .secondHandContainer {
     height: 288px; /* Height of the second hand */
+    transform-origin: 50% 80.8%; /* Pivot point */
     transition: transform 1s linear;
 }
 

@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import handStyles from '../../styles/hands.module.css';
+import secondStyles from '../../styles/secondHand.module.css';
 
 export default function SecondHand({ degrees, name }) {
     const containerRef = useRef(null);
@@ -25,19 +26,27 @@ export default function SecondHand({ degrees, name }) {
         prevDegrees.current = degrees;
     }, [degrees]);
 
-    const rotationStyle = {
-        transformOrigin: '50% 80.8%',
+    const rotationStyleCartier = {
         transform: `translateY(-80.8%) translateX(-50%) rotate(${degrees}deg)`,
         filter: `drop-shadow(${Math.sin((degrees - 90) * (Math.PI / 180)) * 2.5}px ${Math.cos((degrees - 90) * (Math.PI / 180)) * 2.5}px 2px #5e5e5e)`
     };
 
+    const rotationStyleSeamaster = {
+        transform: `translateY(-77.4%) translateX(-50%) rotate(${degrees}deg)`,
+        filter: `drop-shadow(${Math.sin((degrees - 90) * (Math.PI / 180)) * 2.5}px ${Math.cos((degrees - 90) * (Math.PI / 180)) * 2.5}px 2px #5e5e5e)`
+    };
+
     return (
-        <div ref={containerRef} className={handStyles.secondHandContainer} style={rotationStyle}>
-            {name === "Cartier" ? (
-                <img src={"/secondHand.png"} alt="Second Hand" className={handStyles.secondHandImage}/>
-            ) : (
-                <img src={"/SeamasterSecondHand.png"} alt="Second Hand" className={handStyles.secondHandImage}/>
-            )}
-        </div>
+        <>
+        {name === "Cartier" ? (
+            <div ref={containerRef} className={secondStyles.cartierSecond} style={rotationStyleCartier}>
+                <img src={"/secondHand.png"} alt="Second Hand" className={handStyles.secondHandImage} />
+            </div>
+        ) : (
+            <div ref={containerRef} className={secondStyles.seamasterSecond} style={rotationStyleSeamaster}>
+                <img src={"/SeamasterSecondHand.png"} alt="Second Hand" className={handStyles.secondHandImage} />
+            </div>
+        )}
+        </>
     );
 }

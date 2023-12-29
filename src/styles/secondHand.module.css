@@ -1,0 +1,28 @@
+.seamasterSecond, .cartierSecond {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 1s linear;
+}
+
+.seamasterSecond {
+    height: 310px;
+    transform-origin: 50% 77.4%;
+}
+
+.cartierSecond {
+    height: 288px;
+    transform-origin: 50% 80.8%;
+}
+
+@media only screen and (max-width: 543px) {
+    .seamasterSecond {
+        height: 216px;
+    }
+    .cartierSecond {
+        height: 165px;
+    }
+}
