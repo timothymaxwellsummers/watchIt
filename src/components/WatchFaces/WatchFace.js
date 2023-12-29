@@ -35,7 +35,7 @@ const WatchFace = ({ data, hoursDegrees, minutesDegrees, secondsDegrees }) => {
                         layout="fill" // This makes the image fill the container
                         objectFit="cover" // This keeps the aspect ratio and covers the area
                     />
-                    <DateDisplay />
+                    <DateDisplay name={name}/>
                 </div>
                 <HourHand degrees={hoursDegrees} name={name} />
                 <MinuteHand degrees={minutesDegrees} name={name} />

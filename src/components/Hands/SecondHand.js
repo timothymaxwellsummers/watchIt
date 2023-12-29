@@ -33,7 +33,7 @@ export default function SecondHand({ degrees, name }) {
 
     const rotationStyleSeamaster = {
         transform: `translateY(-77.4%) translateX(-50%) rotate(${degrees}deg)`,
-        filter: `drop-shadow(${Math.sin((degrees - 90) * (Math.PI / 180)) * 2.5}px ${Math.cos((degrees - 90) * (Math.PI / 180)) * 2.5}px 2px #5e5e5e)`
+        filter: `drop-shadow(${Math.sin((degrees - 90) * (Math.PI / 180)) * 2.5}px ${Math.cos((degrees - 90) * (Math.PI / 180)) * 2.5}px 2px #001132)`
     };
 
     return (

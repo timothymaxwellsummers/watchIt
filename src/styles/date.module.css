@@ -1,4 +1,4 @@
-.dateContainer {
+.dateContainerCartier {
     position: absolute; /* Position relative to watchFace */
     width: 41px; /* Adjust size as needed */
     height: 63px; /* Adjust size as needed */
@@ -17,7 +17,33 @@
   }
 
   @media only screen and (max-width: 543px) {
-    .dateContainer {
+    .dateContainerCartier {
+      width: 30px;
+      height: 45px;
+      font-size: 20px;
+    }
+  }
+
+  .dateContainerSeamaster {
+    position: absolute; /* Position relative to watchFace */
+    width: 34px; /* Adjust size as needed */
+    height: 50px; /* Adjust size as needed */
+    top: 84.2%; /* Adjust to align with the specific point on the image */
+    left: 50%; /* Adjust to align with the specific point on the image */
+    transform: translate(-50%, -50%); /* Adjust for precise positioning */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+    background-color: #113051;
+    box-shadow: inset 0px 0px 5px #001132;
+    font-family: 'Barlow', sans-serif;
+    color: #fff;
+    font-size: 25px;
+  }
+
+  @media only screen and (max-width: 543px) {
+    .dateContainerSeamaster {
       width: 30px;
       height: 45px;
       font-size: 20px;
