@@ -44,3 +44,40 @@
     @apply bg-background text-foreground;
   }
 }
+
+html, body {
+  overflow-x: hidden ;
+  overflow-y: hidden ;
+}
+
+/* Example CSS */
+.slick-slide {
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* Adjust dots and arrows as needed */
+.slick-dots {
+  top: 80%;
+  left: 12,52%;
+  pointer-events: none; 
+}
+
+.slick-dots li {
+  pointer-events: auto; 
+}
+
+.slick-prev, .slick-next {
+  z-index: 100; /* Ensure arrows are above the content */
+}
+
+@media only screen and (max-height: 800px) {
+  .slick-dots {
+    top: 83%;
+    left: 12,52%;
+  }
+}
+
