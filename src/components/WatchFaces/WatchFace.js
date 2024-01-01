@@ -10,7 +10,7 @@ import { useStopWatch } from '../StopWatchContext';
 
 const WatchFace = ({ data, hoursDegrees, minutesDegrees, secondsDegrees }) => {
     const { stopWatchMode, elapsedTime } = useStopWatch();
-    const { name, imageUrl, backgroundColor, /* other properties */ } = data;
+    const { name, imageUrl, backgroundColor, accentColor, highlightColor/* other properties */ } = data;
 
     const style = {
         backgroundColor: backgroundColor,
@@ -21,7 +21,7 @@ const WatchFace = ({ data, hoursDegrees, minutesDegrees, secondsDegrees }) => {
 
     return (
         <div style={style}>
-            <Info />
+            <Info foregroundColor={accentColor} highlightColor={highlightColor}/>
             <main className={styles.mainContainer}>
                 <div className={styles.backgroundImageContainer}>
                     {stopWatchMode ? (

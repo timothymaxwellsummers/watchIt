@@ -14,7 +14,7 @@ import { Label } from "@/components/ui/label"
 import { Switch } from "@/components/ui/switch"
 import { useStopWatch } from './StopWatchContext';
 
-export default function Info() {
+export default function Info({ foregroundColor, highlightColor }) {
     const { stopWatchMode, setStopWatchMode } = useStopWatch();
 
     const handleToggle = () => {
@@ -25,7 +25,9 @@ export default function Info() {
     return (
         <Dialog>
             <DialogTrigger asChild>
-                <InfoOutlinedIcon className={styles.infoIcon} />
+                <div style={{color: foregroundColor, '--hover-color': highlightColor}}>
+                <InfoOutlinedIcon className={styles.infoIcon}/>
+                </div>
             </DialogTrigger>
             <DialogContent className="sm:max-w-[425px]">
                 <DialogHeader>
