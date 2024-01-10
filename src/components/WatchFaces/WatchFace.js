@@ -14,18 +14,18 @@ const WatchFace = ({ data, hoursDegrees, minutesDegrees, secondsDegrees }) => {
 
     const style = {
         backgroundColor: backgroundColor,
-        minHeight: '100vh', 
+        minHeight: '100vh',
         minWidth: '100vw'
         /* other styling based on passed props */
-      };
+    };
 
     return (
         <div style={style}>
-            <Info foregroundColor={accentColor} highlightColor={highlightColor}/>
+            <Info foregroundColor={accentColor} highlightColor={highlightColor} />
             <main className={styles.mainContainer}>
-                <div className={styles.backgroundImageContainer}>
+                <div className={styles.backgroundImageContainer} style={{ width: name === "G-SHOCK" ? "510px" : "500px" }}>
                     {stopWatchMode ? (
-                        <StopWatch name={name}/>
+                        <StopWatch name={name} />
                     ) : (
                         <></>
                     )}
@@ -35,13 +35,25 @@ const WatchFace = ({ data, hoursDegrees, minutesDegrees, secondsDegrees }) => {
                         layout="fill" // This makes the image fill the container
                         objectFit="cover" // This keeps the aspect ratio and covers the area
                     />
-                    <DateDisplay name={name}/>
+                    {name === "G-SHOCK" ? (
+                    <></>
+                ) : (
+                    <>
+                        <DateDisplay name={name} />
+                    </>
+                )}
                 </div>
-                <HourHand degrees={hoursDegrees} name={name} />
-                <MinuteHand degrees={minutesDegrees} name={name} />
-                <SecondHand degrees={secondsDegrees} name={name} />
-                <div className={styles.circleSilver}></div>
-                <div className={styles.circleBlack}></div>
+                {name === "G-SHOCK" ? (
+                    <></>
+                ) : (
+                    <>
+                        <HourHand degrees={hoursDegrees} name={name} />
+                        <MinuteHand degrees={minutesDegrees} name={name} />
+                        <SecondHand degrees={secondsDegrees} name={name} />
+                        <div className={styles.circleSilver}></div>
+                        <div className={styles.circleBlack}></div>
+                    </>
+                )}
             </main>
         </div >
     );

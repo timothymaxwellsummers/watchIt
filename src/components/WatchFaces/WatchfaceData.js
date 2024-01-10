@@ -23,6 +23,18 @@ export const watchFaces = [
       minuteHand: { /* properties specific to the minute hand */ },
       hourHand: { /* properties specific to the hour hand */ }
     },
-    // Add more watch faces as needed
+    {
+      name: "G-SHOCK",
+      imageUrl: "/G-SHOCKWatchface.png",
+      backgroundColor: "#191919", // Example background color
+      activeDotColor: "#fff", // Example inactive dot color
+      inactiveDotColor: "#C0C5AE", // Example inactive dot color
+      accentColor: "#EBEBE8", // Example accent color
+      highlightColor: "#EEC557", // Example highlight color
+      secondHand: { /* properties specific to the second hand */ },
+      minuteHand: { /* properties specific to the minute hand */ },
+      hourHand: { /* properties specific to the hour hand */ }
+    },
+    // ... more watch faces
   ];
   
